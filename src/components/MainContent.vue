@@ -9,7 +9,7 @@
     background-color: #1c1c1c;
     color: white;
     text-align: center;
-    padding: 25px 0;
+    padding: 25px 80px;
     margin: -8px;
   }
 
