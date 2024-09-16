@@ -9,7 +9,8 @@
     background-color: #1c1c1c;
     color: white;
     text-align: center;
-    padding: 50px 0;
+    padding: 25px 0;
+    margin: -8px;
   }
 
   h2 {
