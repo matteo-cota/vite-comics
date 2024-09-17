@@ -1,5 +1,6 @@
 <template>
     <div class="comics-grid">
+        <button class="current">CURRENT SERIES</button>
       <div
         v-for="(comic, index) in comics"
         :key="index"
@@ -12,6 +13,7 @@
           <p class="comic-card__price">{{ comic.price }}</p>
         </div>
       </div>
+      <button class="load">LOAD MORE</button>
     </div>
   </template>
   
@@ -39,23 +41,54 @@
   <style lang="scss">
   .comics-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(180px, 2fr));
     gap: 20px;
     padding: 20px;
-    background-color: black;    
+    background-color: #252525    
+  }
+
+  .load {
+    POSITION: relative;
+    top: 0;
+    left: 274%;
+    width: 200px;
+    height: 2pc;
+    background-color: #0076ff;
+    border: none;
+  }
+
+  .current {
+    padding: 13px;
+    width: 13%;
+    height: 5%;
+    display: flex;
+    position: absolute;
+    justify-content: space-around;
+    top: 368px;
+    align-items: center;
+    background-color: #0076ff;
+    color: white;
+    border: none;
+  }
+  .current button {
+    background-color: transparent;
+    color: white;
+    padding: 10px 20px;
+    border: solid;
+    border-color: aqua;
+    cursor: pointer;
   }
   
-  .comic-card {
-    border: 1px solid #ddd;
+  .comic-card {    
     border-radius: 8px;
     overflow: hidden;
-    max-width: 200px;
+    max-width: 180px;
     transition: box-shadow 0.3s;
     
   
     &__image {
       width: 100%;
-      height: auto;
+      height: 50%;
     }
   
     &__content {
@@ -63,8 +96,9 @@
       text-align: center;
   
       .comic-card__title {
-        font-size: 1.2rem;
+        font-size: 0.9rem;
         margin-bottom: 8px;
+        color: white;
       }
   
       .comic-card__type {
