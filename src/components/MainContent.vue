@@ -1,15 +1,16 @@
 <template>
     <section class="main-content">
-      <h2>-->Content goes here<--</h2>
+    
     </section>
   </template>
   
   <style scoped>
   .main-content {
-    background-color: #1c1c1c;
+    background-image: url(/img/jumbotron.jpg);
+    background-size: 100%;
     color: white;
     text-align: center;
-    padding: 25px 80px;
+    padding: 150px 80px;
     margin: -8px;
   }
 
